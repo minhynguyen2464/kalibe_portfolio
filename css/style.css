@@ -1,0 +1,228 @@
+/* General Body Styles */
+body {
+	font-family: 'Manrope', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* Navbar Styles */
+.navbar-brand img {
+	height: 40px;
+}
+
+.navbar {
+	background-color: #fff;
+}
+
+.nav-link {
+	color: #000;
+	font-weight: 500;
+	padding: 0.5rem 1rem;
+	font-size: 0.7rem;
+	text-transform: capitalize;
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+}
+
+.dropdown-menu a {
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+}
+
+.active {
+	color: #007bff !important;
+}
+.nav-link:hover {
+	color: #007bff !important;
+}
+
+/* Gallery Styles */
+#gallery {
+	margin-top: 0;
+}
+
+#gallery .gallery-image {
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	transition: flex 0.5s ease-in-out; /* Smooth transition for width */
+	object-fit: cover; /* Ensure image maintains aspect ratio */
+}
+
+/* When an image is expanded */
+#gallery .expanded {
+	width: 100% !important; /* Ensure the expanded image takes full width of its column */
+	height: auto !important; /* Allow height to adjust dynamically */
+}
+
+#gallery .col-xl-3.expanded-col {
+	flex: 0 0 50% !important; /* Make the expanded image take 50% (6 columns) of the row */
+	transition: flex 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth transition for width shrink */
+}
+
+#gallery .col-xl-3.shrink {
+	flex: 0 0 16.66% !important; /* Shrink the other images to take 2 columns */
+	transition: flex 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth transition for width shrink */
+}
+
+/* Container and row styles */
+#gallery .row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.container-fluid {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+#gallery .gallery-image {
+	width: 100%;
+	height: 100%; /* Set fixed height for all images */
+	object-fit: cover; /* Crop the images to maintain aspect ratio */
+}
+
+#gallery .row {
+	width: 100%;
+	margin: 0;
+}
+
+#gallery .col-xl-3 {
+	padding: 5px; /* Adjust padding between images */
+	flex: 1 0 25%; /* Ensure 4 images in a row */
+}
+
+/* Wrapper around the image */
+.image-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/* The introduction label style */
+.intro-label {
+	position: absolute;
+	bottom: 0px; /* Position it at the bottom */
+	left: 0px; /* Position it at the left */
+	background-color: white;
+	color: black;
+	padding: 10px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border-top-right-radius: 20px; /* Apply rounded corner to top-right */
+	display: none; /* Initially hidden */
+	letter-spacing: 1px;
+	transition: right 0.5s ease-in-out; /* Smooth transition for sliding effect */
+}
+
+.intro-label svg {
+	margin-left: 10px; /* Add space between text and arrow */
+}
+
+#gallery .col-xl-3.expanded-col .intro-label {
+	display: block; /* Display label when the image is expanded */
+}
+
+/* General Body Styles */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* Footer Styles */
+footer {
+	background-color: #fff;
+	color: #000;
+	padding: 20px 0;
+	font-size: 1rem;
+}
+
+footer .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer .footer-left {
+	flex: 1;
+	font-size: 0.8rem;
+}
+
+footer .footer-logo {
+	flex: 1;
+	display: flex;
+	justify-content: center; /* Center the logo horizontally */
+}
+
+footer .footer-logo img {
+	height: 40px;
+}
+
+footer .footer-social {
+	flex: 1;
+	display: flex;
+	justify-content: flex-end; /* Align social icons to the right */
+}
+
+footer .footer-social a {
+	color: #000;
+	text-decoration: none; /* Remove underline */
+	display: flex;
+	align-items: center; /* Vertically center the icon with the text */
+	transition: color 0.3s ease;
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+footer .footer-social a:hover {
+	color: #007bff;
+}
+
+/* Adjusting the icon size and spacing if necessary */
+footer .footer-social i {
+	margin-right: 8px; /* Add some space between the icon and the text */
+	font-size: 20px; /* Ensure the icon has a consistent size */
+}
+
+/* Make sure the footer content is responsive */
+@media (max-width: 768px) {
+	footer .container {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	footer .footer-left,
+	footer .footer-logo,
+	footer .footer-social {
+		margin-bottom: 10px;
+	}
+}
+
+.about-me-section {
+	background-color: white;
+	color: black;
+	padding: 100px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 250px;
+}
+
+.about-me-section h2 {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+#typewriter-text {
+	font-family: 'Manrope', sans-serif;
+	font-size: 2rem;
+}
+
+strong {
+	font-weight: 800;
+}
