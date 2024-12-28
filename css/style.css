@@ -256,3 +256,31 @@ footer .footer-social i {
 strong {
 	font-weight: 800;
 }
+
+#back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: white;
+	color: black;
+	border: 2px solid black;
+	padding: 10px; /* Adjust padding to fit the icon perfectly */
+	font-size: 20px; /* Icon size */
+	cursor: pointer;
+	border-radius: 50%; /* Make it circular */
+	width: 50px; /* Set a fixed width */
+	height: 50px; /* Set a fixed height to make it perfectly circular */
+	display: flex; /* Center the icon inside the button */
+	justify-content: center; /* Horizontally center */
+	align-items: center; /* Vertically center */
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow */
+	transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+#back-to-top:hover {
+	background-color: #f1f1f1; /* Light grey background on hover */
+}
+
+#back-to-top i {
+	font-size: 20px; /* Font size for the icon */
+}

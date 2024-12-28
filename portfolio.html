@@ -341,13 +341,21 @@
 				</div>
 			</div>
 		</section>
+		<button id="back-to-top" style="display: none">
+			<i class="fas fa-arrow-up"></i>
+			<!-- Font Awesome up arrow icon -->
+		</button>
 
 		<!-- Footer -->
 		<footer class="bg-white text-black py-3">
 			<div class="container d-flex justify-content-between align-items-center">
 				<!-- Left side: Copyright text -->
 				<div class="footer-left">
-					<p class="mb-0">&copy; 2024 Goncy. All Rights Reserved.</p>
+					<p class="mb-0">
+						&copy; <span id="current-year"></span> Made by
+						<strong>Shun</strong> | Desgin by <strong>Kali</strong>. All Rights
+						Reserved.
+					</p>
 				</div>
 
 				<!-- Middle: Logo -->
@@ -376,7 +384,7 @@
 
 		<!-- Bootstrap JS -->
 		<script src="./js/bannedEvent.js"></script>
-
+		<script src="./js/button.js"></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<!-- Only if using jQuery -->
 		<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
@@ -387,41 +395,38 @@
 		<script>
 			gsap.registerPlugin(ScrollTrigger);
 
-			// Animate the introduction section
-			gsap.from('#artwork-introduction', {
+			// Animate the introduction section with cubic ease-in-out
+			gsap.to('#artwork-introduction', {
+				opacity: 0,
+				x: '-100%', // Move the section to the right as the page scrolls down
+				duration: 2,
+				ease: 'power2.inOut', // Smooth cubic-like easing
 				scrollTrigger: {
 					trigger: '#artwork-introduction',
-					start: 'top 70%',
-					end: 'top 20%',
-					scrub: true,
-					snap: {
-						snapTo: 'labels', // Snap to section labels, or use values like [0, 1, 2]
-						duration: 0.5, // Snapping duration
-						delay: 0, // Delay before snapping
-					},
+					start: 'bottom 70%', // Start when the top of the section reaches the top of the viewport
+					scrub: 3, // Smooth scrolling effect (animation tied to scroll)
 				},
-				opacity: 0,
-				y: -100, // Slide up animation
-				duration: 1,
 			});
 
-			// Animate the gallery section
-			gsap.from('#artwork-gallery', {
-				scrollTrigger: {
-					trigger: '#artwork-gallery',
-					start: 'top 80%',
-					end: 'top 20%',
-					scrub: true,
-					snap: {
-						snapTo: 'labels', // Snap to section labels, or use values like [0, 1, 2]
-						duration: 0.5,
-						delay: 0,
-					},
+			gsap.fromTo(
+				'#artwork-gallery',
+				{
+					opacity: 0, // Starting opacity (hidden at first)
+					x: '-100%', // Starting position (move from left side of the viewport)
 				},
-				opacity: 0,
-				y: 100, // Slide in from left
-				duration: 1,
-			});
+				{
+					opacity: 1, // Ending opacity (fully visible)
+					x: '0%', // Ending position (at its normal position)
+					duration: 2,
+					ease: 'power2.inOut', // Smooth cubic-like easing for transition
+					scrollTrigger: {
+						trigger: '#artwork-gallery',
+						start: 'top 80%', // Trigger when 80% of the gallery section is in the viewport
+						end: 'top 60%', // End when 70% of the gallery section is in the viewport
+						scrub: 3, // Smooth scrolling effect
+					},
+				}
+			);
 		</script>
 	</body>
 </html>
