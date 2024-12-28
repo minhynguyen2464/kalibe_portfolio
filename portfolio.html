@@ -77,12 +77,17 @@
 				background-color: black; /* Darker gray on hover */
 				color: #007bff !important;
 			}
-			/* Floating animation for the images */
-			@keyframes floating {
+			@keyframes elasticFloat {
 				0% {
 					transform: translateY(0);
 				}
+				25% {
+					transform: translateY(-15px);
+				}
 				50% {
+					transform: translateY(-10px);
+				}
+				75% {
 					transform: translateY(-15px);
 				}
 				100% {
@@ -91,7 +96,7 @@
 			}
 
 			.floating-img {
-				animation: floating 3s ease-in-out infinite;
+				/* animation: elasticFloat 4s cubic-bezier(0.25, 1.25, 0.5, 1) infinite; */
 			}
 
 			/* Styling for the artwork gallery */
@@ -107,6 +112,8 @@
 			.artwork-item img {
 				width: 100%;
 				border-radius: 8px;
+				pointer-events: none; /* Prevent all interactions */
+				user-select: none;
 			}
 		</style>
 	</head>
@@ -295,6 +302,7 @@
 									src="./images/2.jpg"
 									alt="Artwork 1"
 									class="img-fluid floating-img"
+									draggable="false"
 								/>
 							</a>
 						</div>
@@ -308,6 +316,7 @@
 									src="./images/6.jpg"
 									alt="Artwork 3"
 									class="img-fluid floating-img"
+									draggable="false"
 								/>
 							</a>
 						</div>
@@ -323,6 +332,7 @@
 									src="./images/10-1.jpg"
 									alt="Artwork 2"
 									class="img-fluid floating-img"
+									draggable="false"
 								/>
 							</a>
 						</div>
@@ -365,6 +375,8 @@
 		</footer>
 
 		<!-- Bootstrap JS -->
+		<script src="./js/bannedEvent.js"></script>
+
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<!-- Only if using jQuery -->
 		<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
@@ -397,7 +409,7 @@
 			gsap.from('#artwork-gallery', {
 				scrollTrigger: {
 					trigger: '#artwork-gallery',
-					start: 'top 70%',
+					start: 'top 80%',
 					end: 'top 20%',
 					scrub: true,
 					snap: {
