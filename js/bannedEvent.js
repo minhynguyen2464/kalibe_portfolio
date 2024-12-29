@@ -16,7 +16,7 @@ setInterval(function () {
 // Disable common screenshot shortcuts
 document.addEventListener('keydown', function (event) {
 	// Block Print Screen
-	if (event.key === 'PrintScreen') {
+	if (event.key === 'PrintScreen' || event.key === 'F12') {
 		event.preventDefault();
 	}
 

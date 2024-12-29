@@ -24,3 +24,12 @@ const currentYear = new Date().getFullYear();
 
 // Set the current year in the span with id 'current-year'
 document.getElementById('current-year').textContent = currentYear;
+
+// // Wait for the page to load completely
+window.addEventListener('load', function () {
+	// Hide the loading screen
+	document.getElementById('loading-screen').style.display = 'none';
+
+	// Show the main content
+	document.getElementById('main-content').style.display = 'block';
+});
