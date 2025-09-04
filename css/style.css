@@ -70,7 +70,7 @@ html {
 /* Gallery Styles */
 #gallery {
 	margin-top: 0;
-	height: 90vh;
+	height: 85vh;
 }
 
 #gallery .gallery-image {
@@ -84,17 +84,16 @@ html {
 /* When an image is expanded */
 #gallery .expanded {
 	width: 100% !important; /* Ensure the expanded image takes full width of its column */
-	height: auto !important; /* Allow height to adjust dynamically */
 }
 
 #gallery .col-xl-3.expanded-col {
 	flex: 0 0 50% !important; /* Make the expanded image take 50% (6 columns) of the row */
-	transition: flex 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth transition for width shrink */
+	transition: flex-basis 0.45s cubic-bezier(0.25, 1, 0.25, 1);
 }
 
 #gallery .col-xl-3.shrink {
 	flex: 0 0 16.66% !important; /* Shrink the other images to take 2 columns */
-	transition: flex 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth transition for width shrink */
+	transition: flex-basis 0.45s cubic-bezier(0.25, 1, 0.25, 1);
 }
 
 /* Container and row styles */
@@ -147,7 +146,7 @@ html {
 	border-top-right-radius: 20px; /* Apply rounded corner to top-right */
 	display: none; /* Initially hidden */
 	letter-spacing: 1px;
-	transition: right 0.5s ease-in-out; /* Smooth transition for sliding effect */
+	transition: right 0.45s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth transition for sliding effect */
 }
 
 .intro-label svg {
