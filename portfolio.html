@@ -102,6 +102,35 @@
 			/* Styling for the artwork gallery */
 			#artwork-gallery {
 				background-color: white;
+				position: relative; /* để pseudo-element nằm đúng */
+				background: #fff; /* nền gốc */
+				overflow: hidden; /* tránh tràn */
+			}
+
+			.bg-pattern {
+				position: absolute;
+				top: -50%;
+				left: -50%;
+				width: 200%;
+				height: 200%;
+				background-image: radial-gradient(
+						circle at 20% 20%,
+						rgba(255, 255, 255, 0.08) 2%,
+						transparent 40%
+					),
+					radial-gradient(
+						circle at 80% 80%,
+						rgba(255, 255, 255, 0.08) 2%,
+						transparent 40%
+					);
+				background-size: 200px 200px;
+				opacity: 0.3; /* Độ mờ của hoa văn */
+				z-index: 0;
+			}
+
+			#artwork-gallery .container {
+				position: relative;
+				z-index: 1; /* gallery nằm trên hoa văn */
 			}
 
 			.artwork-item {
@@ -291,6 +320,7 @@
 			</section>
 			<!-- Artwork Gallery Section -->
 			<section id="artwork-gallery" class="py-5">
+				<div class="bg-pattern"></div>
 				<div class="container">
 					<h2
 						class="text-center mb-5"
@@ -300,81 +330,332 @@
 					</h2>
 					<div class="row">
 						<!-- 1 ROW -->
-						<div class="col-md-4">
-							<div class="artwork-item mt-2 mt-xl-3">
+						<div class="col-md-12">
+							<div class="artwork-item mt-2">
 								<img
-									src="./images/calendar/Dàn-01.jpg"
-									alt="Artwork 1"
+									src="./images/portfolio/portfolio copy-01.png"
+									alt="Artwork 9"
 									class="img-fluid floating-img"
 									draggable="false"
 								/>
 							</div>
-							<div class="artwork-item mt-2 mt-xl-3">
+							<div class="artwork-item mt-2">
 								<img
-									src="./images/calendar/Dàn-06.jpg"
-									alt="Artwork 3"
+									src="./images/portfolio/portfolio copy-04.png"
+									alt="Artwork 9"
 									class="img-fluid floating-img"
 									draggable="false"
 								/>
 							</div>
-							<div class="artwork-item mt-2 mt-xl-3">
+							<div class="artwork-item mt-2">
 								<img
-									src="./images/calendar/Dàn-12.jpg"
-									alt="Artwork 3"
+									src="./images/portfolio/portfolio copy-05.png"
+									alt="Artwork 9"
 									class="img-fluid floating-img"
 									draggable="false"
 								/>
 							</div>
-						</div>
-						<!-- 1 ROW -->
-						<div class="col-md-4">
-							<div class="artwork-item mt-2 mt-xl-3">
+							<div class="artwork-item mt-2">
 								<img
-									src="./images/calendar/Dàn-02.jpg"
-									alt="Artwork 1"
+									src="./images/portfolio/portfolio copy-06.png"
+									alt="Artwork 9"
 									class="img-fluid floating-img"
 									draggable="false"
 								/>
 							</div>
-							<div class="artwork-item mt-2 mt-xl-3">
+							<div class="artwork-item mt-2">
 								<img
-									src="./images/calendar/Dàn-08.jpg"
-									alt="Artwork 3"
+									src="./images/portfolio/portfolio copy-07.png"
+									alt="Artwork 9"
 									class="img-fluid floating-img"
 									draggable="false"
 								/>
 							</div>
-							<div class="artwork-item mt-2 mt-xl-3">
+							<div class="artwork-item mt-2">
 								<img
-									src="./images/calendar/Dàn-13.jpg"
-									alt="Artwork 3"
+									src="./images/portfolio/portfolio copy-08.png"
+									alt="Artwork 9"
 									class="img-fluid floating-img"
 									draggable="false"
 								/>
 							</div>
-						</div>
-						<!-- 1 ROW -->
-						<div class="col-md-4">
-							<div class="artwork-item mt-2 mt-xl-3">
+
+							<div class="artwork-item mt-2">
 								<img
-									src="./images/calendar/Dàn-04.jpg"
-									alt="Artwork 1"
+									src="./images/portfolio/portfolio copy-09.png"
+									alt="Artwork 9"
 									class="img-fluid floating-img"
 									draggable="false"
 								/>
 							</div>
-							<div class="artwork-item mt-2 mt-xl-3">
+							<div class="artwork-item mt-2">
 								<img
-									src="./images/calendar/Dàn-10.jpg"
-									alt="Artwork 3"
+									src="./images/portfolio/portfolio copy-10.png"
+									alt="Artwork 10"
 									class="img-fluid floating-img"
 									draggable="false"
 								/>
 							</div>
-							<div class="artwork-item mt-2 mt-xl-3">
+							<div class="artwork-item mt-2">
 								<img
-									src="./images/calendar/Dàn-14.jpg"
-									alt="Artwork 3"
+									src="./images/portfolio/portfolio copy-11.png"
+									alt="Artwork 11"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-12.png"
+									alt="Artwork 12"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-13.png"
+									alt="Artwork 13"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-14.png"
+									alt="Artwork 14"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-15.png"
+									alt="Artwork 15"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-16.png"
+									alt="Artwork 16"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-17.png"
+									alt="Artwork 17"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-18.png"
+									alt="Artwork 18"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-19.png"
+									alt="Artwork 19"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-20.png"
+									alt="Artwork 20"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-21.png"
+									alt="Artwork 21"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-22.png"
+									alt="Artwork 22"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-23.png"
+									alt="Artwork 23"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-24.png"
+									alt="Artwork 24"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-25.png"
+									alt="Artwork 25"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-26.png"
+									alt="Artwork 26"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-27.png"
+									alt="Artwork 27"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-28.png"
+									alt="Artwork 28"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-29.png"
+									alt="Artwork 29"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-30.png"
+									alt="Artwork 30"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-31.png"
+									alt="Artwork 31"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-32.png"
+									alt="Artwork 32"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-33.png"
+									alt="Artwork 33"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-34.png"
+									alt="Artwork 34"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-35.png"
+									alt="Artwork 35"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-36.png"
+									alt="Artwork 36"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-37.png"
+									alt="Artwork 37"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-38.png"
+									alt="Artwork 38"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-39.png"
+									alt="Artwork 39"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-40.png"
+									alt="Artwork 40"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-41.png"
+									alt="Artwork 41"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-42.png"
+									alt="Artwork 42"
+									class="img-fluid floating-img"
+									draggable="false"
+								/>
+							</div>
+							<div class="artwork-item mt-2">
+								<img
+									src="./images/portfolio/portfolio copy-43.png"
+									alt="Artwork 43"
 									class="img-fluid floating-img"
 									draggable="false"
 								/>
@@ -471,6 +752,26 @@
 					},
 				}
 			);
+
+			gsap.to('#artwork-gallery', {
+				backgroundColor: '#1B1B1B', // turn black
+				color: '#fff', // optional: text turns white
+				ease: 'power1.inOut',
+				scrollTrigger: {
+					trigger: '#artwork-gallery',
+					start: 'top 0%', // when top of section reaches middle of viewport
+					end: 'bottom center', // until bottom of section leaves middle
+					toggleActions: 'play reverse play reverse',
+				},
+			});
+
+			gsap.to('.bg-pattern', {
+				backgroundPosition: '200px 200px',
+				duration: 20,
+				repeat: -1,
+				yoyo: true,
+				ease: 'linear',
+			});
 		</script>
 	</body>
 </html>
